@@ -1,0 +1,3900 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- =====================================================
+         EDITAR AQUI:
+         Título que aparece na aba do navegador
+    ====================================================== -->
+    <title>Bella Aura | Bolsas & Acessórios</title>
+
+    <style>
+
+        /* =====================================================
+           RESET
+        ====================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #fff8fb;
+            color: #29232a;
+        }
+
+        button,
+        input {
+            font-family: inherit;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        /* =====================================================
+           CORES DO SITE
+
+           EDITAR AQUI:
+           Você pode trocar as cores da loja aqui.
+        ====================================================== */
+
+        :root {
+
+            --rosa: #d86b9b;
+
+            --rosa-escuro: #a94672;
+
+            --rosa-claro: #f8dce8;
+
+            --lilas: #b99ad8;
+
+            --creme: #fff8fb;
+
+            --roxo: #563b68;
+
+            --texto: #29232a;
+
+            --cinza: #777;
+
+            --branco: #ffffff;
+
+            --verde: #25d366;
+
+        }
+
+
+        /* =====================================================
+           BARRA SUPERIOR
+        ====================================================== */
+
+        .top-bar {
+
+            background: linear-gradient(
+                90deg,
+                #a94672,
+                #c85d8b,
+                #9b7ac1
+            );
+
+            color: white;
+
+            text-align: center;
+
+            padding: 10px;
+
+            font-size: 13px;
+
+            letter-spacing: 0.5px;
+
+        }
+
+
+        /* =====================================================
+           HEADER
+        ====================================================== */
+
+        header {
+
+            height: 82px;
+
+            background: rgba(255,255,255,0.95);
+
+            backdrop-filter: blur(10px);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            padding: 0 7%;
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+
+        }
+
+
+        /* LOGO */
+
+        .logo {
+
+            font-family: Georgia, serif;
+
+            font-size: 29px;
+
+            font-weight: bold;
+
+            color: var(--roxo);
+
+        }
+
+        .logo span {
+
+            color: var(--rosa);
+
+        }
+
+        .logo-sub {
+
+            display: block;
+
+            font-family: Arial;
+
+            font-size: 8px;
+
+            letter-spacing: 3px;
+
+            color: #999;
+
+            margin-top: 3px;
+
+        }
+
+
+        /* MENU */
+
+        nav {
+
+            display: flex;
+
+            gap: 30px;
+
+        }
+
+        nav a {
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            color: #4b424d;
+
+            transition: 0.3s;
+
+        }
+
+        nav a:hover {
+
+            color: var(--rosa);
+
+        }
+
+
+        /* AÇÕES */
+
+        .header-actions {
+
+            display: flex;
+
+            gap: 15px;
+
+            align-items: center;
+
+        }
+
+        .header-button {
+
+            width: 40px;
+
+            height: 40px;
+
+            border: none;
+
+            background: var(--rosa-claro);
+
+            border-radius: 50%;
+
+            font-size: 18px;
+
+            transition: 0.3s;
+
+            position: relative;
+
+        }
+
+        .header-button:hover {
+
+            background: var(--rosa);
+
+            color: white;
+
+            transform: translateY(-2px);
+
+        }
+
+
+        #cart-count {
+
+            position: absolute;
+
+            right: -4px;
+
+            top: -4px;
+
+            width: 19px;
+
+            height: 19px;
+
+            border-radius: 50%;
+
+            background: var(--rosa-escuro);
+
+            color: white;
+
+            font-size: 10px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+        }
+
+
+        /* =====================================================
+           HERO
+        ====================================================== */
+
+        .hero {
+
+            min-height: 650px;
+
+            display: flex;
+
+            align-items: center;
+
+            padding: 70px 8%;
+
+            position: relative;
+
+            overflow: hidden;
+
+            background:
+
+                radial-gradient(
+                    circle at 80% 20%,
+                    #e8d6f3 0%,
+                    transparent 35%
+                ),
+
+                radial-gradient(
+                    circle at 10% 80%,
+                    #f7d5e3 0%,
+                    transparent 35%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    #fff8fb,
+                    #f7edf6
+                );
+
+        }
+
+
+        /* FORMAS DECORATIVAS */
+
+        .hero::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 350px;
+
+            height: 350px;
+
+            border-radius: 50%;
+
+            background: #efc7dc;
+
+            opacity: 0.35;
+
+            right: -100px;
+
+            top: -100px;
+
+        }
+
+        .hero::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 250px;
+
+            height: 250px;
+
+            border-radius: 50%;
+
+            background: #d9c5ed;
+
+            opacity: 0.4;
+
+            left: -100px;
+
+            bottom: -100px;
+
+        }
+
+
+        .hero-content {
+
+            width: 55%;
+
+            position: relative;
+
+            z-index: 2;
+
+        }
+
+
+        .hero-tag {
+
+            display: inline-block;
+
+            background: white;
+
+            color: var(--rosa-escuro);
+
+            padding: 9px 16px;
+
+            border-radius: 30px;
+
+            font-size: 12px;
+
+            font-weight: bold;
+
+            letter-spacing: 1px;
+
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+
+        }
+
+
+        .hero h1 {
+
+            font-family: Georgia, serif;
+
+            font-size: clamp(45px, 6vw, 75px);
+
+            line-height: 1.05;
+
+            margin: 22px 0;
+
+            color: var(--roxo);
+
+        }
+
+        .hero h1 span {
+
+            color: var(--rosa);
+
+        }
+
+
+        .hero p {
+
+            font-size: 17px;
+
+            color: #6f6570;
+
+            line-height: 1.8;
+
+            max-width: 540px;
+
+            margin-bottom: 30px;
+
+        }
+
+
+        .hero-buttons {
+
+            display: flex;
+
+            gap: 12px;
+
+            flex-wrap: wrap;
+
+        }
+
+
+        .btn-primary {
+
+            background: linear-gradient(
+                135deg,
+                var(--rosa),
+                var(--rosa-escuro)
+            );
+
+            border: none;
+
+            color: white;
+
+            padding: 16px 28px;
+
+            border-radius: 30px;
+
+            font-weight: bold;
+
+            box-shadow: 0 8px 20px rgba(216,107,155,0.25);
+
+            transition: 0.3s;
+
+        }
+
+        .btn-primary:hover {
+
+            transform: translateY(-3px);
+
+            box-shadow: 0 12px 25px rgba(216,107,155,0.35);
+
+        }
+
+
+        .btn-secondary {
+
+            background: white;
+
+            border: 1px solid #e8d8e2;
+
+            color: var(--roxo);
+
+            padding: 15px 28px;
+
+            border-radius: 30px;
+
+            font-weight: bold;
+
+        }
+
+
+        /* IMAGEM DO HERO */
+
+        .hero-image {
+
+            width: 42%;
+
+            height: 480px;
+
+            border-radius: 180px 180px 20px 20px;
+
+            overflow: hidden;
+
+            box-shadow: 0 30px 70px rgba(89,55,88,0.2);
+
+            position: relative;
+
+            z-index: 2;
+
+        }
+
+
+        .hero-image img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+        }
+
+
+        /* =====================================================
+           BENEFÍCIOS
+        ====================================================== */
+
+        .benefits {
+
+            background: white;
+
+            padding: 28px 7%;
+
+            display: grid;
+
+            grid-template-columns: repeat(4,1fr);
+
+            box-shadow: 0 3px 20px rgba(0,0,0,0.04);
+
+        }
+
+
+        .benefit {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 13px;
+
+            padding: 12px 20px;
+
+            border-right: 1px solid #eee;
+
+        }
+
+        .benefit:last-child {
+
+            border: none;
+
+        }
+
+
+        .benefit-icon {
+
+            width: 45px;
+
+            height: 45px;
+
+            border-radius: 50%;
+
+            background: var(--rosa-claro);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 21px;
+
+        }
+
+
+        .benefit h4 {
+
+            font-size: 14px;
+
+            margin-bottom: 4px;
+
+        }
+
+        .benefit p {
+
+            font-size: 11px;
+
+            color: #999;
+
+        }
+
+
+        /* =====================================================
+           SEÇÕES
+        ====================================================== */
+
+        .section {
+
+            padding: 90px 7%;
+
+        }
+
+
+        .section-title {
+
+            text-align: center;
+
+            margin-bottom: 45px;
+
+        }
+
+
+        .section-title small {
+
+            color: var(--rosa-escuro);
+
+            text-transform: uppercase;
+
+            font-weight: bold;
+
+            letter-spacing: 2px;
+
+            font-size: 11px;
+
+        }
+
+
+        .section-title h2 {
+
+            font-family: Georgia, serif;
+
+            color: var(--roxo);
+
+            font-size: 42px;
+
+            margin: 10px 0;
+
+        }
+
+
+        .section-title p {
+
+            color: #888;
+
+        }
+
+
+        /* =====================================================
+           PESQUISA
+        ====================================================== */
+
+        .search-box {
+
+            max-width: 600px;
+
+            margin: 0 auto 30px;
+
+            position: relative;
+
+        }
+
+
+        .search-box input {
+
+            width: 100%;
+
+            padding: 16px 50px 16px 20px;
+
+            border-radius: 30px;
+
+            border: 1px solid #eadce5;
+
+            background: white;
+
+            outline: none;
+
+            font-size: 14px;
+
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+
+        }
+
+
+        .search-icon {
+
+            position: absolute;
+
+            right: 20px;
+
+            top: 13px;
+
+            font-size: 20px;
+
+        }
+
+
+        /* =====================================================
+           CATEGORIAS
+        ====================================================== */
+
+        .categories {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 10px;
+
+            flex-wrap: wrap;
+
+            margin-bottom: 45px;
+
+        }
+
+
+        .category {
+
+            background: white;
+
+            border: 1px solid #eadce5;
+
+            padding: 10px 20px;
+
+            border-radius: 25px;
+
+            transition: 0.3s;
+
+        }
+
+
+        .category:hover,
+
+        .category.active {
+
+            background: var(--rosa);
+
+            color: white;
+
+            border-color: var(--rosa);
+
+        }
+
+
+        /* =====================================================
+           PRODUTOS
+        ====================================================== */
+
+        .products {
+
+            display: grid;
+
+            grid-template-columns: repeat(4,1fr);
+
+            gap: 25px;
+
+        }
+
+
+        .product {
+
+            background: white;
+
+            border-radius: 18px;
+
+            overflow: hidden;
+
+            border: 1px solid #eee5ea;
+
+            transition: 0.3s;
+
+            position: relative;
+
+        }
+
+
+        .product:hover {
+
+            transform: translateY(-8px);
+
+            box-shadow: 0 20px 40px rgba(89,55,88,0.12);
+
+        }
+
+
+        .product-image {
+
+            height: 330px;
+
+            position: relative;
+
+            overflow: hidden;
+
+            background: #f3e8ef;
+
+        }
+
+
+        .product-image img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: 0.5s;
+
+        }
+
+
+        .product:hover .product-image img {
+
+            transform: scale(1.07);
+
+        }
+
+
+        .product-tag {
+
+            position: absolute;
+
+            left: 15px;
+
+            top: 15px;
+
+            background: var(--rosa-escuro);
+
+            color: white;
+
+            padding: 7px 12px;
+
+            border-radius: 20px;
+
+            font-size: 10px;
+
+            font-weight: bold;
+
+            text-transform: uppercase;
+
+        }
+
+
+        .favorite {
+
+            position: absolute;
+
+            right: 15px;
+
+            top: 15px;
+
+            width: 38px;
+
+            height: 38px;
+
+            border-radius: 50%;
+
+            border: none;
+
+            background: white;
+
+            font-size: 18px;
+
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+
+        }
+
+
+        .product-info {
+
+            padding: 20px;
+
+        }
+
+
+        .product-category {
+
+            font-size: 10px;
+
+            color: var(--rosa);
+
+            text-transform: uppercase;
+
+            font-weight: bold;
+
+            letter-spacing: 1px;
+
+        }
+
+
+        .product-info h3 {
+
+            font-family: Georgia, serif;
+
+            color: var(--roxo);
+
+            margin: 8px 0;
+
+            font-size: 19px;
+
+        }
+
+
+        .stars {
+
+            color: #e0a83d;
+
+            font-size: 13px;
+
+        }
+
+
+        .reviews {
+
+            font-size: 11px;
+
+            color: #999;
+
+        }
+
+
+        .price {
+
+            margin: 14px 0;
+
+        }
+
+
+        .old-price {
+
+            color: #aaa;
+
+            font-size: 12px;
+
+            text-decoration: line-through;
+
+            margin-right: 7px;
+
+        }
+
+
+        .current-price {
+
+            color: var(--roxo);
+
+            font-size: 20px;
+
+            font-weight: bold;
+
+        }
+
+
+        .add-cart {
+
+            width: 100%;
+
+            border: none;
+
+            background: var(--roxo);
+
+            color: white;
+
+            padding: 13px;
+
+            border-radius: 10px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+
+        }
+
+
+        .add-cart:hover {
+
+            background: var(--rosa);
+
+        }
+
+
+        /* =====================================================
+           BANNER
+        ====================================================== */
+
+        .promo {
+
+            margin: 10px 7% 80px;
+
+            min-height: 300px;
+
+            border-radius: 25px;
+
+            overflow: hidden;
+
+            position: relative;
+
+            background:
+
+                linear-gradient(
+                    90deg,
+                    rgba(74,48,87,0.95),
+                    rgba(155,91,126,0.75)
+                ),
+
+                url("https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=1600&q=85");
+
+            background-size: cover;
+
+            background-position: center;
+
+            display: flex;
+
+            align-items: center;
+
+            padding: 60px;
+
+            color: white;
+
+        }
+
+
+        .promo-content {
+
+            max-width: 600px;
+
+        }
+
+
+        .promo small {
+
+            color: #f8dce8;
+
+            letter-spacing: 2px;
+
+            font-weight: bold;
+
+        }
+
+
+        .promo h2 {
+
+            font-family: Georgia, serif;
+
+            font-size: 42px;
+
+            margin: 12px 0;
+
+        }
+
+
+        .promo p {
+
+            color: #eee;
+
+            line-height: 1.7;
+
+            margin-bottom: 22px;
+
+        }
+
+
+        /* =====================================================
+           SOBRE A LOJA
+        ====================================================== */
+
+        .about {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 70px;
+
+            align-items: center;
+
+            background: linear-gradient(
+                135deg,
+                #fff,
+                #f9edf5
+            );
+
+        }
+
+
+        .about-image {
+
+            height: 500px;
+
+            border-radius: 25px;
+
+            overflow: hidden;
+
+        }
+
+
+        .about-image img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+        }
+
+
+        .about-text small {
+
+            color: var(--rosa);
+
+            font-weight: bold;
+
+            letter-spacing: 2px;
+
+        }
+
+
+        .about-text h2 {
+
+            font-family: Georgia, serif;
+
+            color: var(--roxo);
+
+            font-size: 43px;
+
+            margin: 15px 0 20px;
+
+        }
+
+
+        .about-text p {
+
+            color: #777;
+
+            line-height: 1.9;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        /* =====================================================
+           INSTAGRAM
+        ====================================================== */
+
+        .instagram {
+
+            background: white;
+
+        }
+
+
+        .instagram-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(4,1fr);
+
+            gap: 15px;
+
+        }
+
+
+        .instagram-item {
+
+            height: 230px;
+
+            overflow: hidden;
+
+            border-radius: 15px;
+
+        }
+
+
+        .instagram-item img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: 0.4s;
+
+        }
+
+
+        .instagram-item:hover img {
+
+            transform: scale(1.08);
+
+        }
+
+
+        /* =====================================================
+           NEWSLETTER
+        ====================================================== */
+
+        .newsletter {
+
+            text-align: center;
+
+            padding: 80px 7%;
+
+            background:
+
+                radial-gradient(
+                    circle at top right,
+                    #e7d7f1,
+                    transparent 35%
+                ),
+
+                #f9e8f0;
+
+        }
+
+
+        .newsletter h2 {
+
+            font-family: Georgia, serif;
+
+            color: var(--roxo);
+
+            font-size: 35px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .newsletter p {
+
+            color: #777;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .newsletter-form {
+
+            max-width: 550px;
+
+            margin: auto;
+
+            display: flex;
+
+        }
+
+
+        .newsletter-form input {
+
+            flex: 1;
+
+            padding: 16px 20px;
+
+            border: none;
+
+            outline: none;
+
+            border-radius: 30px 0 0 30px;
+
+        }
+
+
+        .newsletter-form button {
+
+            border: none;
+
+            background: var(--roxo);
+
+            color: white;
+
+            padding: 0 25px;
+
+            border-radius: 0 30px 30px 0;
+
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ====================================================== */
+
+        footer {
+
+            background: #34283b;
+
+            color: white;
+
+            padding: 65px 7% 25px;
+
+        }
+
+
+        .footer-grid {
+
+            display: grid;
+
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+
+            gap: 50px;
+
+        }
+
+
+        .footer-logo {
+
+            font-family: Georgia, serif;
+
+            font-size: 30px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .footer-logo span {
+
+            color: #e99bbd;
+
+        }
+
+
+        footer h3 {
+
+            color: #f1b5cd;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        footer p,
+
+        footer a {
+
+            color: #c8becd;
+
+            font-size: 13px;
+
+            margin-bottom: 10px;
+
+            display: block;
+
+        }
+
+
+        footer a:hover {
+
+            color: white;
+
+        }
+
+
+        .copyright {
+
+            margin-top: 50px;
+
+            padding-top: 20px;
+
+            border-top: 1px solid #514557;
+
+            text-align: center;
+
+            color: #9d92a2;
+
+            font-size: 11px;
+
+        }
+
+
+        /* =====================================================
+           WHATSAPP
+        ====================================================== */
+
+        .whatsapp {
+
+            position: fixed;
+
+            right: 25px;
+
+            bottom: 25px;
+
+            width: 60px;
+
+            height: 60px;
+
+            background: var(--verde);
+
+            color: white;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 27px;
+
+            z-index: 1500;
+
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+
+            transition: 0.3s;
+
+        }
+
+
+        .whatsapp:hover {
+
+            transform: scale(1.1);
+
+        }
+
+
+        /* =====================================================
+           CARRINHO
+        ====================================================== */
+
+        .overlay {
+
+            position: fixed;
+
+            inset: 0;
+
+            background: rgba(0,0,0,0.45);
+
+            z-index: 1900;
+
+            display: none;
+
+        }
+
+
+        .overlay.active {
+
+            display: block;
+
+        }
+
+
+        .cart {
+
+            position: fixed;
+
+            top: 0;
+
+            right: -450px;
+
+            width: 420px;
+
+            max-width: 92%;
+
+            height: 100vh;
+
+            background: white;
+
+            z-index: 2000;
+
+            padding: 30px;
+
+            overflow-y: auto;
+
+            transition: 0.4s;
+
+            box-shadow: -10px 0 30px rgba(0,0,0,0.15);
+
+        }
+
+
+        .cart.active {
+
+            right: 0;
+
+        }
+
+
+        .cart-header {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            border-bottom: 1px solid #eee;
+
+            padding-bottom: 20px;
+
+        }
+
+
+        .cart-header h2 {
+
+            font-family: Georgia, serif;
+
+            color: var(--roxo);
+
+        }
+
+
+        .close-cart {
+
+            border: none;
+
+            background: none;
+
+            font-size: 28px;
+
+        }
+
+
+        .cart-item {
+
+            display: grid;
+
+            grid-template-columns: 65px 1fr auto;
+
+            gap: 12px;
+
+            padding: 17px 0;
+
+            border-bottom: 1px solid #eee;
+
+            align-items: center;
+
+        }
+
+
+        .cart-item img {
+
+            width: 65px;
+
+            height: 65px;
+
+            object-fit: cover;
+
+            border-radius: 8px;
+
+        }
+
+
+        .cart-item h4 {
+
+            font-size: 13px;
+
+        }
+
+
+        .cart-item p {
+
+            color: var(--rosa);
+
+            font-weight: bold;
+
+            font-size: 13px;
+
+            margin-top: 5px;
+
+        }
+
+
+        .quantity {
+
+            margin-top: 7px;
+
+        }
+
+
+        .quantity button {
+
+            border: 1px solid #ddd;
+
+            background: white;
+
+            width: 25px;
+
+            height: 25px;
+
+        }
+
+
+        .remove {
+
+            border: none;
+
+            background: none;
+
+            color: #aaa;
+
+        }
+
+
+        .cart-summary {
+
+            margin-top: 25px;
+
+        }
+
+
+        .summary-line {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            margin-bottom: 13px;
+
+        }
+
+
+        .total {
+
+            font-size: 22px;
+
+            font-weight: bold;
+
+            color: var(--roxo);
+
+        }
+
+
+        .checkout {
+
+            width: 100%;
+
+            border: none;
+
+            background: var(--verde);
+
+            color: white;
+
+            padding: 16px;
+
+            border-radius: 8px;
+
+            font-weight: bold;
+
+            margin-top: 15px;
+
+        }
+
+
+        /* =====================================================
+           RESPONSIVO
+        ====================================================== */
+
+        @media (max-width: 1100px) {
+
+            .products {
+
+                grid-template-columns: repeat(3,1fr);
+
+            }
+
+            .hero-content {
+
+                width: 55%;
+
+            }
+
+            .hero-image {
+
+                width: 42%;
+
+            }
+
+        }
+
+
+        @media (max-width: 850px) {
+
+            header {
+
+                padding: 0 5%;
+
+            }
+
+            nav {
+
+                display: none;
+
+            }
+
+            .hero {
+
+                flex-direction: column;
+
+                gap: 40px;
+
+                text-align: center;
+
+            }
+
+            .hero-content {
+
+                width: 100%;
+
+            }
+
+            .hero p {
+
+                margin-left: auto;
+
+                margin-right: auto;
+
+            }
+
+            .hero-buttons {
+
+                justify-content: center;
+
+            }
+
+            .hero-image {
+
+                width: 75%;
+
+                height: 400px;
+
+            }
+
+            .benefits {
+
+                grid-template-columns: repeat(2,1fr);
+
+            }
+
+            .products {
+
+                grid-template-columns: repeat(2,1fr);
+
+            }
+
+            .about {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .footer-grid {
+
+                grid-template-columns: repeat(2,1fr);
+
+            }
+
+            .instagram-grid {
+
+                grid-template-columns: repeat(2,1fr);
+
+            }
+
+        }
+
+
+        @media (max-width: 550px) {
+
+            .top-bar {
+
+                font-size: 11px;
+
+            }
+
+            header {
+
+                height: 70px;
+
+            }
+
+            .logo {
+
+                font-size: 22px;
+
+            }
+
+            .logo-sub {
+
+                font-size: 6px;
+
+                letter-spacing: 2px;
+
+            }
+
+            .header-actions {
+
+                gap: 7px;
+
+            }
+
+            .header-button {
+
+                width: 35px;
+
+                height: 35px;
+
+            }
+
+            .hero {
+
+                padding: 55px 6%;
+
+            }
+
+            .hero h1 {
+
+                font-size: 43px;
+
+            }
+
+            .hero-image {
+
+                width: 100%;
+
+                height: 380px;
+
+            }
+
+            .benefits {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .benefit {
+
+                border-right: none;
+
+                border-bottom: 1px solid #eee;
+
+            }
+
+            .products {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .product-image {
+
+                height: 390px;
+
+            }
+
+            .promo {
+
+                margin: 0 5% 60px;
+
+                padding: 35px;
+
+            }
+
+            .promo h2 {
+
+                font-size: 31px;
+
+            }
+
+            .about-text h2 {
+
+                font-size: 35px;
+
+            }
+
+            .instagram-grid {
+
+                grid-template-columns: repeat(2,1fr);
+
+            }
+
+            .instagram-item {
+
+                height: 170px;
+
+            }
+
+            .footer-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .newsletter-form {
+
+                flex-direction: column;
+
+                gap: 10px;
+
+            }
+
+            .newsletter-form input,
+
+            .newsletter-form button {
+
+                border-radius: 30px;
+
+                padding: 15px;
+
+            }
+
+            .cart {
+
+                width: 95%;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         BARRA SUPERIOR
+
+         EDITAR AQUI
+    ====================================================== -->
+
+    <div class="top-bar">
+
+        ✨ Frete especial • Novidades toda semana • Atendimento pelo WhatsApp
+
+    </div>
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header>
+
+        <!-- EDITAR NOME DA LOJA AQUI -->
+
+        <a href="#inicio" class="logo">
+
+            Bella<span>Aura</span>
+
+            <span class="logo-sub">
+
+                BOLSAS & ACESSÓRIOS
+
+            </span>
+
+        </a>
+
+
+        <nav>
+
+            <a href="#inicio">Início</a>
+
+            <a href="#produtos">Bolsas</a>
+
+            <a href="#sobre">Sobre nós</a>
+
+            <a href="#instagram">Galeria</a>
+
+            <a href="#contato">Contato</a>
+
+        </nav>
+
+
+        <div class="header-actions">
+
+            <button
+                class="header-button"
+                onclick="focusSearch()">
+
+                🔍
+
+            </button>
+
+
+            <button
+                class="header-button"
+                onclick="openCart()">
+
+                🛒
+
+                <span id="cart-count">0</span>
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section class="hero" id="inicio">
+
+
+        <div class="hero-content">
+
+            <span class="hero-tag">
+
+                ✨ NOVA COLEÇÃO 2026
+
+            </span>
+
+
+            <h1>
+
+                O detalhe que
+                <span>transforma</span>
+                seu look.
+
+            </h1>
+
+
+            <p>
+
+                Bolsas escolhidas para mulheres que
+                gostam de estilo, praticidade e personalidade.
+                Encontre o modelo perfeito para cada momento.
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a href="#produtos">
+
+                    <button class="btn-primary">
+
+                        Conhecer coleção →
+
+                    </button>
+
+                </a>
+
+
+                <a href="#sobre">
+
+                    <button class="btn-secondary">
+
+                        Nossa história
+
+                    </button>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=1000&q=90"
+                alt="Coleção de bolsas">
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         BENEFÍCIOS
+    ====================================================== -->
+
+    <section class="benefits">
+
+
+        <div class="benefit">
+
+            <div class="benefit-icon">
+                🚚
+            </div>
+
+            <div>
+
+                <h4>Entrega</h4>
+
+                <p>
+                    Consulte nossa região
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="benefit">
+
+            <div class="benefit-icon">
+                💳
+            </div>
+
+            <div>
+
+                <h4>Pagamento</h4>
+
+                <p>
+                    Pix e outras opções
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="benefit">
+
+            <div class="benefit-icon">
+                🔒
+            </div>
+
+            <div>
+
+                <h4>Compra segura</h4>
+
+                <p>
+                    Atendimento personalizado
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="benefit">
+
+            <div class="benefit-icon">
+                💬
+            </div>
+
+            <div>
+
+                <h4>Atendimento</h4>
+
+                <p>
+                    Fale conosco pelo WhatsApp
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- =====================================================
+         PRODUTOS
+    ====================================================== -->
+
+    <section class="section" id="produtos">
+
+
+        <div class="section-title">
+
+            <small>
+                Escolha o seu
+            </small>
+
+            <h2>
+                Nossos favoritos
+            </h2>
+
+            <p>
+                Modelos selecionados para você.
+            </p>
+
+        </div>
+
+
+        <!-- PESQUISA -->
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="search"
+                placeholder="Pesquisar uma bolsa..."
+                onkeyup="searchProducts()">
+
+            <span class="search-icon">
+                🔍
+            </span>
+
+        </div>
+
+
+        <!-- CATEGORIAS -->
+
+        <div class="categories">
+
+            <button
+                class="category active"
+                onclick="filterProducts('todos', this)">
+
+                Todos
+
+            </button>
+
+            <button
+                class="category"
+                onclick="filterProducts('bolsa', this)">
+
+                Bolsas
+
+            </button>
+
+            <button
+                class="category"
+                onclick="filterProducts('tiracolo', this)">
+
+                Tiracolo
+
+            </button>
+
+            <button
+                class="category"
+                onclick="filterProducts('mochila', this)">
+
+                Mochilas
+
+            </button>
+
+            <button
+                class="category"
+                onclick="filterProducts('premium', this)">
+
+                Premium
+
+            </button>
+
+        </div>
+
+
+        <div class="products" id="product-list">
+
+
+            <!-- =================================================
+                 PRODUTO 1
+
+                 EDITAR:
+                 nome
+                 preço
+                 foto
+                 categoria
+            ================================================== -->
+
+            <article
+                class="product"
+                data-category="bolsa"
+                data-name="Bolsa Aurora">
+
+                <div class="product-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=85"
+                        alt="Bolsa Aurora">
+
+                    <span class="product-tag">
+                        Destaque
+                    </span>
+
+                    <button
+                        class="favorite"
+                        onclick="favorite(this)">
+
+                        ♡
+
+                    </button>
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        Bolsa
+                    </span>
+
+                    <h3>
+                        Bolsa Aurora
+                    </h3>
+
+
+                    <div>
+
+                        <span class="stars">
+                            ★★★★★
+                        </span>
+
+                        <span class="reviews">
+                            (28)
+                        </span>
+
+                    </div>
+
+
+                    <div class="price">
+
+                        <span class="current-price">
+                            R$ 189,90
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        class="add-cart"
+                        onclick="addToCart(
+                            'Bolsa Aurora',
+                            189.90,
+                            'https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=400&q=85'
+                        )">
+
+                        🛒 Adicionar ao carrinho
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUTO 2 -->
+
+            <article
+                class="product"
+                data-category="tiracolo"
+                data-name="Bolsa Luna">
+
+                <div class="product-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1594223274512-ad4803739b7c?auto=format&fit=crop&w=800&q=85"
+                        alt="Bolsa Luna">
+
+                    <span class="product-tag">
+                        Oferta
+                    </span>
+
+                    <button
+                        class="favorite"
+                        onclick="favorite(this)">
+
+                        ♡
+
+                    </button>
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        Tiracolo
+                    </span>
+
+                    <h3>
+                        Bolsa Luna
+                    </h3>
+
+
+                    <div>
+
+                        <span class="stars">
+                            ★★★★★
+                        </span>
+
+                        <span class="reviews">
+                            (19)
+                        </span>
+
+                    </div>
+
+
+                    <div class="price">
+
+                        <span class="old-price">
+                            R$ 189,90
+                        </span>
+
+                        <span class="current-price">
+                            R$ 149,90
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        class="add-cart"
+                        onclick="addToCart(
+                            'Bolsa Luna',
+                            149.90,
+                            'https://images.unsplash.com/photo-1594223274512-ad4803739b7c?auto=format&fit=crop&w=400&q=85'
+                        )">
+
+                        🛒 Adicionar ao carrinho
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUTO 3 -->
+
+            <article
+                class="product"
+                data-category="mochila"
+                data-name="Mochila Urban">
+
+                <div class="product-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=85"
+                        alt="Mochila Urban">
+
+                    <span class="product-tag">
+                        Novo
+                    </span>
+
+                    <button
+                        class="favorite"
+                        onclick="favorite(this)">
+
+                        ♡
+
+                    </button>
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        Mochila
+                    </span>
+
+                    <h3>
+                        Mochila Urban
+                    </h3>
+
+
+                    <div>
+
+                        <span class="stars">
+                            ★★★★★
+                        </span>
+
+                        <span class="reviews">
+                            (34)
+                        </span>
+
+                    </div>
+
+
+                    <div class="price">
+
+                        <span class="current-price">
+                            R$ 219,90
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        class="add-cart"
+                        onclick="addToCart(
+                            'Mochila Urban',
+                            219.90,
+                            'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=400&q=85'
+                        )">
+
+                        🛒 Adicionar ao carrinho
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUTO 4 -->
+
+            <article
+                class="product"
+                data-category="premium"
+                data-name="Bolsa Bella">
+
+                <div class="product-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=800&q=85"
+                        alt="Bolsa Bella">
+
+                    <span class="product-tag">
+                        Premium
+                    </span>
+
+                    <button
+                        class="favorite"
+                        onclick="favorite(this)">
+
+                        ♡
+
+                    </button>
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        Premium
+                    </span>
+
+                    <h3>
+                        Bolsa Bella
+                    </h3>
+
+
+                    <div>
+
+                        <span class="stars">
+                            ★★★★★
+                        </span>
+
+                        <span class="reviews">
+                            (17)
+                        </span>
+
+                    </div>
+
+
+                    <div class="price">
+
+                        <span class="current-price">
+                            R$ 279,90
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        class="add-cart"
+                        onclick="addToCart(
+                            'Bolsa Bella',
+                            279.90,
+                            'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=400&q=85'
+                        )">
+
+                        🛒 Adicionar ao carrinho
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUTO 5 -->
+
+            <article
+                class="product"
+                data-category="bolsa"
+                data-name="Bolsa Sofia">
+
+                <div class="product-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=800&q=85"
+                        alt="Bolsa Sofia">
+
+                    <button
+                        class="favorite"
+                        onclick="favorite(this)">
+
+                        ♡
+
+                    </button>
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        Bolsa
+                    </span>
+
+                    <h3>
+                        Bolsa Sofia
+                    </h3>
+
+
+                    <div>
+
+                        <span class="stars">
+                            ★★★★★
+                        </span>
+
+                        <span class="reviews">
+                            (22)
+                        </span>
+
+                    </div>
+
+
+                    <div class="price">
+
+                        <span class="current-price">
+                            R$ 169,90
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        class="add-cart"
+                        onclick="addToCart(
+                            'Bolsa Sofia',
+                            169.90,
+                            'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=400&q=85'
+                        )">
+
+                        🛒 Adicionar ao carrinho
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUTO 6 -->
+
+            <article
+                class="product"
+                data-category="premium"
+                data-name="Bolsa Glamour">
+
+                <div class="product-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&w=800&q=85"
+                        alt="Bolsa Glamour">
+
+                    <span class="product-tag">
+                        Oferta
+                    </span>
+
+                    <button
+                        class="favorite"
+                        onclick="favorite(this)">
+
+                        ♡
+
+                    </button>
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        Premium
+                    </span>
+
+                    <h3>
+                        Bolsa Glamour
+                    </h3>
+
+
+                    <div>
+
+                        <span class="stars">
+                            ★★★★★
+                        </span>
+
+                        <span class="reviews">
+                            (41)
+                        </span>
+
+                    </div>
+
+
+                    <div class="price">
+
+                        <span class="old-price">
+                            R$ 249,90
+                        </span>
+
+                        <span class="current-price">
+                            R$ 199,90
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        class="add-cart"
+                        onclick="addToCart(
+                            'Bolsa Glamour',
+                            199.90,
+                            'https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&w=400&q=85'
+                        )">
+
+                        🛒 Adicionar ao carrinho
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUTO 7 -->
+
+            <article
+                class="product"
+                data-category="tiracolo"
+                data-name="Bolsa Serena">
+
+                <div class="product-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&w=800&q=85"
+                        alt="Bolsa Serena">
+
+                    <button
+                        class="favorite"
+                        onclick="favorite(this)">
+
+                        ♡
+
+                    </button>
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        Tiracolo
+                    </span>
+
+                    <h3>
+                        Bolsa Serena
+                    </h3>
+
+
+                    <div>
+
+                        <span class="stars">
+                            ★★★★★
+                        </span>
+
+                        <span class="reviews">
+                            (15)
+                        </span>
+
+                    </div>
+
+
+                    <div class="price">
+
+                        <span class="current-price">
+                            R$ 159,90
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        class="add-cart"
+                        onclick="addToCart(
+                            'Bolsa Serena',
+                            159.90,
+                            'https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&w=400&q=85'
+                        )">
+
+                        🛒 Adicionar ao carrinho
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUTO 8 -->
+
+            <article
+                class="product"
+                data-category="bolsa"
+                data-name="Bolsa Charlotte">
+
+                <div class="product-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1564222254-9a8e4c8f9c91?auto=format&fit=crop&w=800&q=85"
+                        alt="Bolsa Charlotte">
+
+                    <span class="product-tag">
+                        Novo
+                    </span>
+
+                    <button
+                        class="favorite"
+                        onclick="favorite(this)">
+
+                        ♡
+
+                    </button>
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        Bolsa
+                    </span>
+
+                    <h3>
+                        Bolsa Charlotte
+                    </h3>
+
+
+                    <div>
+
+                        <span class="stars">
+                            ★★★★★
+                        </span>
+
+                        <span class="reviews">
+                            (12)
+                        </span>
+
+                    </div>
+
+
+                    <div class="price">
+
+                        <span class="current-price">
+                            R$ 189,90
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        class="add-cart"
+                        onclick="addToCart(
+                            'Bolsa Charlotte',
+                            189.90,
+                            'https://images.unsplash.com/photo-1564222254-9a8e4c8f9c91?auto=format&fit=crop&w=400&q=85'
+                        )">
+
+                        🛒 Adicionar ao carrinho
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         BANNER
+    ====================================================== -->
+
+    <section class="promo">
+
+        <div class="promo-content">
+
+            <small>
+                COLEÇÃO ESPECIAL
+            </small>
+
+            <h2>
+                Uma bolsa para cada versão de você.
+            </h2>
+
+            <p>
+                Descubra modelos para o trabalho,
+                encontros, viagens e momentos especiais.
+            </p>
+
+            <a href="#produtos">
+
+                <button class="btn-primary">
+
+                    Ver produtos →
+
+                </button>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SOBRE
+    ====================================================== -->
+
+    <section class="section about" id="sobre">
+
+
+        <div class="about-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=1000&q=90"
+                alt="Sobre a Bella Aura">
+
+        </div>
+
+
+        <div class="about-text">
+
+            <small>
+                SOBRE A BELLA AURA
+            </small>
+
+
+            <h2>
+                Mais que uma bolsa.
+                Seu estilo.
+            </h2>
+
+
+            <p>
+
+                A Bella Aura nasceu para oferecer bolsas
+                que unem beleza, praticidade e personalidade.
+
+            </p>
+
+
+            <p>
+
+                Cada peça é escolhida pensando em mulheres
+                que querem se sentir bem e expressar seu
+                próprio estilo em todos os momentos.
+
+            </p>
+
+
+            <p>
+
+                Nossa missão é tornar cada escolha especial.
+
+            </p>
+
+
+            <button class="btn-primary">
+
+                Conheça nossa história
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         INSTAGRAM / GALERIA
+    ====================================================== -->
+
+    <section
+        class="section instagram"
+        id="instagram">
+
+
+        <div class="section-title">
+
+            <small>
+                @bella.aura
+            </small>
+
+            <h2>
+                Siga nossa inspiração
+            </h2>
+
+            <p>
+                Acompanhe novidades e lançamentos.
+            </p>
+
+        </div>
+
+
+        <div class="instagram-grid">
+
+
+            <div class="instagram-item">
+
+                <img
+                    src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=600&q=80"
+                    alt="Bolsa">
+
+            </div>
+
+
+            <div class="instagram-item">
+
+                <img
+                    src="https://images.unsplash.com/photo-1594223274512-ad4803739b7c?auto=format&fit=crop&w=600&q=80"
+                    alt="Bolsa">
+
+            </div>
+
+
+            <div class="instagram-item">
+
+                <img
+                    src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80"
+                    alt="Mochila">
+
+            </div>
+
+
+            <div class="instagram-item">
+
+                <img
+                    src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=600&q=80"
+                    alt="Bolsa">
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         NEWSLETTER
+    ====================================================== -->
+
+    <section class="newsletter">
+
+
+        <h2>
+            Receba nossas novidades 💌
+        </h2>
+
+
+        <p>
+            Cadastre seu e-mail e fique por dentro
+            dos lançamentos e promoções.
+        </p>
+
+
+        <form
+            class="newsletter-form"
+            onsubmit="subscribe(event)">
+
+            <input
+                type="email"
+                placeholder="Digite seu melhor e-mail"
+                required>
+
+            <button>
+                Quero receber
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- =====================================================
+         CONTATO
+    ====================================================== -->
+
+    <section
+        class="section"
+        id="contato"
+        style="text-align:center;">
+
+
+        <div class="section-title">
+
+            <small>
+                Atendimento
+            </small>
+
+            <h2>
+                Entre em contato
+            </h2>
+
+            <p>
+                Tire suas dúvidas e faça seu pedido.
+            </p>
+
+        </div>
+
+
+        <!-- EDITAR INFORMAÇÕES AQUI -->
+
+        <p style="margin-bottom:12px;">
+            📱 WhatsApp:
+            <strong>(11) 99999-9999</strong>
+        </p>
+
+
+        <p style="margin-bottom:12px;">
+            📧 E-mail:
+            <strong>contato@bellaaura.com.br</strong>
+        </p>
+
+
+        <p>
+            📍 São Paulo - SP
+        </p>
+
+    </section>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+
+        <div class="footer-grid">
+
+
+            <div>
+
+                <div class="footer-logo">
+
+                    Bella<span>Aura</span>
+
+                </div>
+
+
+                <p>
+
+                    Bolsas e acessórios escolhidos
+                    para combinar com seu estilo.
+
+                </p>
+
+
+                <p>
+
+                    Qualidade, beleza e personalidade.
+
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Loja
+                </h3>
+
+                <a href="#inicio">
+                    Início
+                </a>
+
+                <a href="#produtos">
+                    Produtos
+                </a>
+
+                <a href="#sobre">
+                    Sobre nós
+                </a>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Atendimento
+                </h3>
+
+                <p>
+                    Segunda a sexta
+                </p>
+
+                <p>
+                    09h às 18h
+                </p>
+
+                <p>
+                    WhatsApp
+                </p>
+
+                <p>
+                    E-mail
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Redes sociais
+                </h3>
+
+                <!-- EDITAR LINKS -->
+
+                <a href="#">
+                    Instagram
+                </a>
+
+                <a href="#">
+                    Facebook
+                </a>
+
+                <a href="#">
+                    TikTok
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 Bella Aura —
+            Todos os direitos reservados.
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         BOTÃO WHATSAPP
+
+         EDITAR AQUI:
+
+         5511999999999
+
+         Coloque o número da sua tia com:
+
+         55 + DDD + número
+
+         Exemplo:
+         5511988887777
+    ====================================================== -->
+
+    <a
+        class="whatsapp"
+        href="https://wa.me/5511999999999"
+        target="_blank">
+
+        💬
+
+    </a>
+
+
+    <!-- =====================================================
+         CARRINHO
+    ====================================================== -->
+
+    <div
+        class="overlay"
+        id="overlay"
+        onclick="closeCart()">
+    </div>
+
+
+    <aside
+        class="cart"
+        id="cart">
+
+
+        <div class="cart-header">
+
+            <h2>
+                Meu carrinho
+            </h2>
+
+
+            <button
+                class="close-cart"
+                onclick="closeCart()">
+
+                ×
+
+            </button>
+
+        </div>
+
+
+        <div id="cart-items">
+
+            <p style="color:#999; margin-top:25px;">
+
+                Seu carrinho está vazio.
+
+            </p>
+
+        </div>
+
+
+        <div class="cart-summary">
+
+
+            <div class="summary-line">
+
+                <span>
+                    Subtotal
+                </span>
+
+                <strong>
+                    R$ <span id="subtotal">0,00</span>
+                </strong>
+
+            </div>
+
+
+            <div class="summary-line">
+
+                <span class="total">
+                    Total
+                </span>
+
+                <strong class="total">
+                    R$ <span id="total">0,00</span>
+                </strong>
+
+            </div>
+
+
+            <button
+                class="checkout"
+                onclick="checkoutWhatsApp()">
+
+                💬 Finalizar pedido pelo WhatsApp
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+
+
+        /* =====================================================
+           CARRINHO
+        ====================================================== */
+
+        let cart = [];
+
+
+        function addToCart(name, price, image) {
+
+
+            const existing =
+                cart.find(
+                    item => item.name === name
+                );
+
+
+            if (existing) {
+
+                existing.quantity++;
+
+            } else {
+
+                cart.push({
+
+                    name: name,
+
+                    price: price,
+
+                    image: image,
+
+                    quantity: 1
+
+                });
+
+            }
+
+
+            updateCart();
+
+            openCart();
+
+        }
+
+
+        function removeItem(index) {
+
+            cart.splice(index, 1);
+
+            updateCart();
+
+        }
+
+
+        function increase(index) {
+
+            cart[index].quantity++;
+
+            updateCart();
+
+        }
+
+
+        function decrease(index) {
+
+
+            if (cart[index].quantity > 1) {
+
+                cart[index].quantity--;
+
+            } else {
+
+                cart.splice(index, 1);
+
+            }
+
+
+            updateCart();
+
+        }
+
+
+        function updateCart() {
+
+
+            const cartItems =
+                document.getElementById(
+                    "cart-items"
+                );
+
+
+            const count =
+                document.getElementById(
+                    "cart-count"
+                );
+
+
+            let totalQuantity = 0;
+
+            let subtotal = 0;
+
+
+            cart.forEach(item => {
+
+                totalQuantity += item.quantity;
+
+                subtotal +=
+                    item.price *
+                    item.quantity;
+
+            });
+
+
+            count.textContent =
+                totalQuantity;
+
+
+            if (cart.length === 0) {
+
+                cartItems.innerHTML = `
+
+                    <p style="color:#999; margin-top:25px;">
+
+                        Seu carrinho está vazio.
+
+                    </p>
+
+                `;
+
+            } else {
+
+
+                cartItems.innerHTML = "";
+
+
+                cart.forEach((item, index) => {
+
+
+                    cartItems.innerHTML += `
+
+                        <div class="cart-item">
+
+                            <img
+                                src="${item.image}"
+                                alt="${item.name}">
+
+
+                            <div>
+
+                                <h4>
+                                    ${item.name}
+                                </h4>
+
+                                <p>
+                                    R$ ${item.price
+                                        .toFixed(2)
+                                        .replace(".", ",")}
+                                </p>
+
+
+                                <div class="quantity">
+
+                                    <button
+                                        onclick="decrease(${index})">
+                                        −
+                                    </button>
+
+
+                                    <span style="margin:0 8px;">
+                                        ${item.quantity}
+                                    </span>
+
+
+                                    <button
+                                        onclick="increase(${index})">
+                                        +
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+                            <button
+                                class="remove"
+                                onclick="removeItem(${index})">
+
+                                🗑️
+
+                            </button>
+
+                        </div>
+
+                    `;
+
+                });
+
+            }
+
+
+            document.getElementById(
+                "subtotal"
+            ).textContent =
+                subtotal
+                    .toFixed(2)
+                    .replace(".", ",");
+
+
+            document.getElementById(
+                "total"
+            ).textContent =
+                subtotal
+                    .toFixed(2)
+                    .replace(".", ",");
+
+        }
+
+
+        /* =====================================================
+           ABRIR CARRINHO
+        ====================================================== */
+
+        function openCart() {
+
+            document
+                .getElementById("cart")
+                .classList.add("active");
+
+
+            document
+                .getElementById("overlay")
+                .classList.add("active");
+
+        }
+
+
+        /* =====================================================
+           FECHAR CARRINHO
+        ====================================================== */
+
+        function closeCart() {
+
+            document
+                .getElementById("cart")
+                .classList.remove("active");
+
+
+            document
+                .getElementById("overlay")
+                .classList.remove("active");
+
+        }
+
+
+        /* =====================================================
+           FINALIZAR PELO WHATSAPP
+
+           EDITAR O NÚMERO ABAIXO
+        ====================================================== */
+
+        function checkoutWhatsApp() {
+
+
+            if (cart.length === 0) {
+
+                alert(
+                    "Seu carrinho está vazio!"
+                );
+
+                return;
+
+            }
+
+
+            let message =
+                "Olá! Gostaria de fazer um pedido na Bella Aura:%0A%0A";
+
+
+            let total = 0;
+
+
+            cart.forEach(item => {
+
+
+                const itemTotal =
+                    item.price *
+                    item.quantity;
+
+
+                total += itemTotal;
+
+
+                message +=
+                    "👜 " +
+                    item.name +
+                    "%0A" +
+
+                    "Quantidade: " +
+                    item.quantity +
+                    "%0A" +
+
+                    "Valor: R$ " +
+                    itemTotal
+                        .toFixed(2)
+                        .replace(".", ",") +
+
+                    "%0A%0A";
+
+            });
+
+
+            message +=
+                "💰 TOTAL: R$ " +
+                total
+                    .toFixed(2)
+                    .replace(".", ",");
+
+
+            /*
+                EDITAR AQUI:
+
+                Número da sua tia
+
+                55 + DDD + número
+            */
+
+            const phone =
+                "5511981387928";
+
+
+            window.open(
+
+                "https://wa.me/" +
+                phone +
+                "?text=" +
+                message,
+
+                "_blank"
+
+            );
+
+        }
+
+
+        /* =====================================================
+           FAVORITOS
+        ====================================================== */
+
+        function favorite(button) {
+
+
+            if (
+                button.innerText.trim() === "♡"
+            ) {
+
+                button.innerText = "♥";
+
+                button.style.color =
+                    "#d14d7e";
+
+            } else {
+
+                button.innerText = "♡";
+
+                button.style.color =
+                    "#29232a";
+
+            }
+
+        }
+
+
+        /* =====================================================
+           FILTRO DE CATEGORIAS
+        ====================================================== */
+
+        function filterProducts(
+            category,
+            button
+        ) {
+
+
+            document
+                .querySelectorAll(".category")
+                .forEach(
+                    item =>
+                    item.classList.remove("active")
+                );
+
+
+            button.classList.add("active");
+
+
+            document
+                .querySelectorAll(".product")
+                .forEach(product => {
+
+
+                    if (
+                        category === "todos" ||
+                        product.dataset.category === category
+                    ) {
+
+                        product.style.display =
+                            "block";
+
+                    } else {
+
+                        product.style.display =
+                            "none";
+
+                    }
+
+                });
+
+        }
+
+
+        /* =====================================================
+           PESQUISA
+        ====================================================== */
+
+        function searchProducts() {
+
+
+            const search =
+                document
+                    .getElementById("search")
+                    .value
+                    .toLowerCase();
+
+
+            document
+                .querySelectorAll(".product")
+                .forEach(product => {
+
+
+                    const name =
+                        product.dataset.name
+                            .toLowerCase();
+
+
+                    if (
+                        name.includes(search)
+                    ) {
+
+                        product.style.display =
+                            "block";
+
+                    } else {
+
+                        product.style.display =
+                            "none";
+
+                    }
+
+                });
+
+        }
+
+
+        /* =====================================================
+           FOCAR NA PESQUISA
+        ====================================================== */
+
+        function focusSearch() {
+
+            document
+                .getElementById("produtos")
+                .scrollIntoView();
+
+
+            setTimeout(() => {
+
+                document
+                    .getElementById("search")
+                    .focus();
+
+            }, 500);
+
+        }
+
+
+        /* =====================================================
+           NEWSLETTER
+        ====================================================== */
+
+        function subscribe(event) {
+
+            event.preventDefault();
+
+
+            alert(
+                "Cadastro realizado com sucesso! 💕"
+            );
+
+
+            event.target.reset();
+
+        }
+
+
+        /* =====================================================
+           INICIAR
+        ====================================================== */
+
+        updateCart();
+
+
+    </script>
+
+
+</body>
+
+</html>
+```
